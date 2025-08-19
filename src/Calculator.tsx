@@ -57,7 +57,7 @@ const Calculator: React.FC = () => {
   const calculateFirstResult = () => {
     const { x, y, z } = selectedValues;
     if (x !== null) {
-      return 2*x + 11;
+      return Math.abs(2*x + 11);
     }
     return 'Please select an X value';
   };
@@ -65,7 +65,7 @@ const Calculator: React.FC = () => {
   const calculateSecondResult = () => {
     const { x, y, z } = selectedValues;
     if (y !== null && z !== null) {
-      return (2*z + y) -5;
+      return Math.abs((2*z + y) -5);
     }
     return 'Please select Z and Y values';
   };
@@ -73,7 +73,7 @@ const Calculator: React.FC = () => {
   const calculateThirdResult = () => {
     const { x, y, z } = selectedValues;
     if (x !== null && y !== null && z !== null) {
-      return y + z - x;
+      return Math.abs(y + z - x);
     }
     return 'Please select X, Y and Z values';
   };
